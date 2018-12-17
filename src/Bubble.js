@@ -105,6 +105,12 @@ export default class Bubble extends React.PureComponent {
           {currentMessage.received && <Text style={[styles.tick, this.props.tickStyle]}>✓</Text>}
         </View>
       );
+    } else {
+      return (
+        <View style={styles.tickView}>
+          <Text style={[styles.tick, this.props.tickStyle]}>◷</Text>
+        </View>
+      );
     }
     return null;
   }
